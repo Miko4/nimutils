@@ -106,11 +106,10 @@ Try 'wc --help' for more information.""")
 
 proc readNames(filename: string): seq[string] =
   var lines = readFile(filename).splitLines()
-  lines.mapIt(it.strip)
   result = @[]
   for line in lines:
-    if line.len > 0:
-      result.add(line)
+    if line.strip.len > 0:
+      result.add(line.strip)
 
 proc parseOption(): Option =
   result.filenames = @[]
