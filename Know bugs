@@ -1,0 +1,7 @@
+echo
+ - does not check if writing was successfull
+
+cat
+ - Not sure if cat -u is handled correctly
+ - cat - cat.nim does not behave standart compliant
+ - does not check if writing was successfull
